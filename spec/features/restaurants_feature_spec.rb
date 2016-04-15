@@ -47,7 +47,9 @@ feature 'Restaurants' do
     context 'adding a photo' do
       scenario 'user should be able to upload a photo' do
         sign_up_one
-        
+        add_nandos_with_photo
+        expect(page).to have_content 'Nando\'s'
+        expect(page).to have_css("img[src$='system/restaurants/images/nandos.png']")
       end
     end
   end

@@ -22,9 +22,10 @@ def add_kfc
   click_button 'Create a restaurant'
 end
 
-def add_kfc_with_photo
+def add_nandos_with_photo
   click_link 'Add a restaurant'
-  fill_in 'Name', with: 'KFC'
+  fill_in 'Name', with: 'Nando\'s'
+  attach_file('restaurant_image', Rails.root + 'public/images/nandos.png')
   click_button 'Create a restaurant'
 end
 
